@@ -27,6 +27,7 @@
 				cssStyle: 'light-theme',
 				cssLinkStyle: 'page-link',
 				cssCurrentPageStyle: 'current',
+				showPrevNext: true,
 				labelMap: [],
 				selectOnClick: true,
 				nextAtFront: false,
@@ -148,12 +149,12 @@
 			var $panel = tagName === 'UL' ? this : $('<ul></ul>').appendTo(this);
 
 			// Generate Prev link
-			if (o.prevText) {
+			if (o.showPrevNext && o.prevText) {
 				methods._appendItem.call(this, o.currentPage - 1, {text: o.prevText, classes: 'prev'});
 			}
 
 			// Generate Next link (if option set for at front)
-			if (o.nextText && o.nextAtFront) {
+			if (o.showPrevNext && o.nextText && o.nextAtFront) {
 				methods._appendItem.call(this, o.currentPage + 1, {text: o.nextText, classes: 'next'});
 			}
 

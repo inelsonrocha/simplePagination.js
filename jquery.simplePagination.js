@@ -26,6 +26,7 @@
 				ellipseText: '&hellip;',
 				cssStyle: 'light-theme',
 				cssLinkStyle: 'page-link',
+				cssCurrentPageStyle: 'current',
 				labelMap: [],
 				selectOnClick: true,
 				nextAtFront: false,
@@ -227,7 +228,7 @@
 				} else {
 					$linkWrapper.addClass('active');
 				}
-				$link = $('<span class="current">' + (options.text) + '</span>');
+				$link = $('<span class="' + o.cssCurrentPageStyle + '">' + (options.text) + '</span>');
 			} else {
 				$link = $('<a href="' + o.hrefTextPrefix + (pageIndex + 1) + o.hrefTextSuffix + '" class="' + o.cssLinkStyle + '">' + (options.text) + '</a>');
 				$link.click(function(event){

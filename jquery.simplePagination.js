@@ -190,7 +190,7 @@
 			}
 
 			// Generate Next link (unless option is set for at front)
-			if (o.nextText && !o.nextAtFront) {
+			if (o.showPrevNext && o.nextText && !o.nextAtFront) {
 				methods._appendItem.call(this, o.currentPage + 1, {text: o.nextText, classes: 'next'});
 			}
 		},

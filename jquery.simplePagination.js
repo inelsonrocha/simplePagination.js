@@ -25,6 +25,7 @@
 				nextText: 'Next',
 				ellipseText: '&hellip;',
 				cssStyle: 'light-theme',
+				cssLinkStyle: 'page-link',
 				labelMap: [],
 				selectOnClick: true,
 				nextAtFront: false,
@@ -228,7 +229,7 @@
 				}
 				$link = $('<span class="current">' + (options.text) + '</span>');
 			} else {
-				$link = $('<a href="' + o.hrefTextPrefix + (pageIndex + 1) + o.hrefTextSuffix + '" class="page-link">' + (options.text) + '</a>');
+				$link = $('<a href="' + o.hrefTextPrefix + (pageIndex + 1) + o.hrefTextSuffix + '" class="' + o.cssLinkStyle + '">' + (options.text) + '</a>');
 				$link.click(function(event){
 					return methods._selectPage.call(self, pageIndex, event);
 				});
